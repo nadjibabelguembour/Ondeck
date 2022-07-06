@@ -1,0 +1,188 @@
+:root{
+    --bgColor:#f3ede5;
+    --orangeColor:#f7b301;
+    --button:#143417;
+    --text:#8e8c8a;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text);
+}
+body{
+    background-color: var(--bgColor);
+    /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+    
+}
+header{
+    grid-column: 2/12;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
+ul li{
+    margin-right: 20px;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    border-bottom: 1px solid var(--text);
+}
+.signUp{
+    display: flex;
+    justify-content: space-between;   
+}
+.signUp button{
+    margin-left: 15px;
+    margin-top: -15px;
+}
+main{
+    grid-column: 2/12;
+    grid-row: 3/span 7;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 25px;
+}
+img{
+    width: 40%;
+    height: 90%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 30px;
+    margin-top: 5%;
+    margin-right: 20px;
+
+}
+h1{
+    font-size: 58px;
+    font-weight: bold;
+    color: #000;
+}
+h2{
+    font-size: 48px;
+    color: var(--orangeColor);
+}
+.left p,
+.rate,
+header
+{
+    font-size: 24px;
+}
+.rate{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+button{
+    background-color: var(--button);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    height: 60px;
+    width:140px;
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.left button{
+    margin-bottom: 20px;
+}
+.left svg{
+  margin-left: 20px;
+}
+.fa-shopify{
+    color: #95be47;
+    font-size: 34px;
+    margin-left: 20px;
+}
+
+footer{
+    grid-column: 2/12;
+    grid-row: 9/span 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    gap: 30px;
+}
+footer .sponsors{
+    display: flex;
+    gap: 40px;
+
+}
+
+/*----------------------------------------------------------------------------------------*/
+/* Start MediaQuery */
+
+/* mobile */
+@media  (max-width:599px){
+    .container{
+        grid-template-rows: repeat(8,1fr);
+        width: 720px;
+        gap: 0;
+        font-size: 18px;
+    }
+    .container header,
+    .container main,
+    .container footer{
+        grid-column: 1/ 11;
+        margin-left: 10px;
+    }
+    .container nav,
+    .container .signUp,
+    img{
+        visibility: hidden;
+    }
+    .container footer{
+        justify-content: flex-start;
+        align-items: flex-start;
+      
+    }
+    h1{
+        font-size: 32px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .container .left .rate{
+        display: flex;
+
+    }
+
+    .container footer,
+    .container footer .sponsors,
+    .container footer .stats{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        word-break: break-all;
+    }
+
+   
+}
+
